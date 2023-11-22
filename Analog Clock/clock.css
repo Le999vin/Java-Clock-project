@@ -1,0 +1,74 @@
+/* Background styling for the entire page */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    /* Setting the background image and styles */
+    background: url('Screenshot\ 2023-11-22\ 155953.png') no-repeat center center;
+    background-size: cover;
+}
+
+/* Styling for the clock container */
+.clock {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 10px solid #000000; /* Border around the clock */
+    border-radius: 50%; /* Making the clock a circle */
+    /* Applying background image to the clock */
+    background: url('Screenshot\ 2023-11-22\ 155953.png') no-repeat center center;
+    background-size: cover;
+}
+
+/* Styling for the minute hand */
+.min-hand {
+    width: 3px;
+    height: 85px;
+    z-index: 2; /* Layering the minute hand above the hour hand */
+    background-color: #ff0000; /* Red color for the minute hand */
+    position: absolute;
+    bottom: 50%; /* Aligning the bottom of the hand to the center */
+    left: 50%; /* Aligning the left of the hand to the center */
+    transform-origin: 50% 100%; /* Rotating around the bottom center */
+}
+
+/* Styling for the hour hand */
+.hour-hand {
+    width: 4px;
+    height: 60px;
+    z-index: 1; /* Layering the hour hand below the minute hand */
+    background-color: #ffffff; /* White color for the hour hand */
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: 50% 100%; /* Rotating around the bottom center */
+    transform: translate(-50%, -100%); /* Adjusting position to center properly */
+}
+
+/* Styling for the second hand */
+.second-hand {
+    width: 3px;
+    height: 115px;
+    z-index: 3; /* Layering the second hand above both minute and hour hands */
+    background-color: rgb(255, 255, 255); /* White color for the second hand */
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: 50% 100%; /* Rotating around the bottom center */
+    transform: translate(-50%, -100%); /* Adjusting position to center properly */
+}
+
+/* Styling for the center dot of the clock */
+.center {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #ffffff; /* White color for the center dot */
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    margin-top: -6px; /* Adjusting position to center properly */
+    margin-left: -6px; /* Adjusting position to center properly */
+}
